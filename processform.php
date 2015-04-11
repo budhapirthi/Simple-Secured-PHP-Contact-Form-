@@ -78,7 +78,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
 			$clientMessage = empty($clientMessage);
 
 		else:
-			$msg = "Oops! Something went wrong and message couldn't be send.";
+			$msg = "Oops! Something went wrong and message couldn't be sent.";
 		endif; // mail form data
 
 
