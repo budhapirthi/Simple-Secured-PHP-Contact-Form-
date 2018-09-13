@@ -6,12 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="description" content="Contact form using HTML, PHP and CSS">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
 	<!-- CSS 
 	======================================================================  -->
 	<link rel="stylesheet" type="text/css" href="mystyle.css">
-
-
 </head>
 
 <body>
@@ -24,8 +21,8 @@
 		<!-- $_SERVER["PHP_SELF"] sends the submitted form data to the page itself, 
 		instead of jumping to a different page. This way, 
 		the user will get error messages on the same page as the form.
-		Also htmlspecialchars is use to prevents attackers from exploiting 
-		the code by injecting HTML or Javascript code (Cross-site Scripting attacks) in forms    --> 			
+		Also htmlspecialchars is used to prevents attackers from exploiting 
+		the code by injecting HTML or JavaScript code (Cross-site Scripting attacks) in forms    --> 			
 		<form id="contact-form" name="myform" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"  method="post">
 
 			<label>Name *</label><br/>

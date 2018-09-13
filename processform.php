@@ -15,8 +15,8 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
 		$clientEmail = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);}
 	if (isset($_POST['subject'])) {	
 		$clientSubject = strip_tags(trim($_POST['subject'])); }
-	// here i am taking the varible $clientMessage
-		//and running a filter sanatizing the string form the posted message, which will remove any HTML special characters
+	// here i am taking the variable $clientMessage
+		//and running a filter sanitizing the string form the posted message, which will remove any HTML special characters
 	if (isset($_POST['message'])) {
 		$clientMessage = filter_var(trim($_POST['message']), FILTER_SANITIZE_STRING); } 
 	
@@ -61,13 +61,13 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
 	if (!($formerrors)):
 		//Put your email address in here
 		$to = "youemailaddress@gmail.com";
-		//set the email subject, just put the title where the form is comoing from 
+		//set the email subject, just put the title where the form is coming from 
 		$subject = "From $clientEmail -- Contact Form ";
 		// Set the message
 		$message = "$clientName says\r\n $clientMessage";
 		
 		// issue the mail command
-		// Just to remind php deosn't actuall mail anything
+		// Just to remind PHP doesn't actually mail anything
 	    // Mail is handled by your server's send mail command.
 		if (mail($to, $subject, $message)):	
 			$msg = "Thank You! Your message has been sent.";
@@ -78,7 +78,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
 			$clientMessage = empty($clientMessage);
 
 		else:
-			$msg = "Oops! Something went wrong and message couldn't be send.";
+			$msg = "Oops! Something went wrong and message couldn't be sent.";
 		endif; // mail form data
 
 
